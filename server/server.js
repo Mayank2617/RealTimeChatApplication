@@ -7,14 +7,14 @@ const { Server } = require('socket.io');
 const Message = require('./models/Message');
 
 const app = express();
-app.use(cors({ origin: '*' }));
+app.use(cors({ origin: 'https://real-time-chat-application-ochre-delta.vercel.app' }));
 app.use(express.json());
 
 const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: '*',
+    origin: 'https://real-time-chat-application-ochre-delta.vercel.app', // Update this too!
     methods: ['GET', 'POST'],
   },
 });
