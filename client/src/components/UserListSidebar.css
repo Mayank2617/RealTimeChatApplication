@@ -1,0 +1,87 @@
+.sidebar {
+  width: 300px;
+  background-color: var(--bg-sidebar);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sidebar-header {
+  padding: 24px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.sidebar-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.my-username {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.user-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px 0;
+}
+
+.no-users {
+  padding: 0 20px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.user-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  gap: 12px;
+}
+
+.user-item:hover {
+  background-color: #F9FAFB;
+}
+
+.user-item.active {
+  background-color: var(--active-chat);
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.user-name {
+  flex: 1;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.online-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #10B981; /* green success dot */
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+  }
+}

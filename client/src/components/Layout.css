@@ -1,0 +1,31 @@
+.layout-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar-container {
+  flex-shrink: 0;
+  height: 100%;
+}
+
+.main-chat-container {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-page);
+}
+
+@media (max-width: 768px) {
+  .sidebar-container {
+    width: 100%;
+  }
+  .main-chat-container {
+    width: 100%;
+  }
+  .hide-on-mobile {
+    display: none;
+  }
+}
